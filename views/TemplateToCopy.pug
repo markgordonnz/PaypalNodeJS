@@ -1,0 +1,134 @@
+include header.pug
+
+body(data-spy="scroll", data-offeset="50" data-target="navbar-collapse")
+    <!-- Initial Payment Button -->
+    div(id="initialjs" class="modal")
+        div(class="modal-content")
+            span(class="close") Cancel
+            h1 Initial Consult $800 AUD
+            p You will now be taken to the Paypal site for payment.
+            a(href="#pricing" class="cancelbutton") Cancel
+            a(href="/buy" class="paynowbutton") Pay Now
+
+    div(class="navbar navbar-fixed-top navbar-default", role="navigation")
+        div.container 
+            div.navbar-header
+                button.navbar-toggle(data-toggle="collapse" data-target=".navbar-collapse")
+                    span.icon.icon-bar
+                    span.icon.icon-bar
+                    span.icon.icon-bar
+                a(class='navbar.brand', href="#")
+                    img.img-responsive(src="./images/logo.png", alt="logo")
+            div(class="collapse navbar-collapse")
+                ul(class="nav navbar-nav navbar-right")
+                    li
+                        a(href="http://localhost:3000/#home", class="smoothScroll") HOME
+                    li
+                        a(href="http://localhost:3000//#service", class="smoothScroll") SERVICE
+                    li
+                        a(href="http://localhost:3000/#about", class="smoothScroll") ABOUT
+                    li
+                        a(href="http://localhost:3000/#team", class="smoothScroll") TEAM
+                    li
+                        a(href="http://localhost:3000/#pricing", class="smoothScroll") PRICING                   
+                    li
+                        a(href="http://localhost:3000/#contact", class="smoothScroll") CONTACT                    
+
+    <!-- End Navigation -->
+
+    section(id="home", class="text-centre")
+        div.container
+            <!-- This is where you would enter your content for this page -->
+    
+
+    <!-- start contact -->
+    div(id="contact")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-3 col-sm-4 wow fadeInLeft", data-wow-delay="0.6s")
+                    h2
+                        strong Solution
+                        h2 Co.
+                    p Quisque at elit sapien. Sed velit enim, fringilla non suscipit quis, tristique et turpis. Proin vitae nisi justo.
+                    ul(class="social-icon")
+                        li 
+                            a(href="#", class="fa fa-facebook")
+                        li
+                            a(href="#", class="fa fa-twitter")
+                        li
+                            a(href="#", class="fa fa-instagram")
+
+                div(class="col-md-3 col-sm-4 wow fadeIn", data-wow-delay="0.9s")
+                    address
+                        h3 Visit Office
+                        p 
+                            i(class="fa fa-map-marker too-icon") 
+                            p 123 Walking Street, New York</p>
+                        p
+                            i(class="fa fa-phone too-icon")
+                            p 010-010-0220
+                        p
+                            i(class="fa fa-envelope-o too-icon") 
+                            p hello@company.com
+
+                form(action="#", method="post", class="col-md-6 col-sm-4", id="contact-form", role="form")
+                    div(class="col-md-6 col-sm-12 wow fadeIn", data-wow-delay="0.3s")
+                        input(name="name", type="text", class="form-control", id="name", placeholder="Name")
+						
+                    div(class="col-md-6 col-sm-12 wow fadeIn", data-wow-delay="0.3s")
+                        input(name="email", type="email", class="form-control", id="email", placeholder="Email")
+						
+                    div(class="col-md-12 col-sm-12 wow fadeIn", data-wow-delay="0.9s")
+                        textarea(name="message", rows="5", class="form-control", id="message", placeholder="Message")
+				
+                    div(class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn", data-wow-delay="0.3s")
+                        input(name="submit", type="submit", class="form-control", id="submit", value="Send")
+
+    <!-- start footer -->
+    footer
+        div(class="container")
+            div(class="row")
+                div(class="col-md-8 col-sm-7")
+                    p Copyright &copy; 2018 Solution Company
+                        small Designed by 
+                            a(rel="nofollow" href="http://www.tooplate.com" target="_parent") Tooplate
+				
+                div(class="col-md-4 col-sm-5")
+                    ul(class="social-icon")
+                        li
+                            a(href="#", class="fa fa-facebook")
+                        li
+                            a(href="#", class="fa fa-twitter")
+                        li
+                            a(href="#", class="fa fa-instagram")
+                        li
+                            a(href="#", class="fa fa-pinterest")
+                        li
+                            a(href="#", class="fa fa-google")
+                        li
+                            a(href="#", class="fa fa-github")
+    <!-- end footer -->
+
+
+    <!-- jQuery -->
+    script
+        include js/jquery.js
+        include js/bootstrap.min.js
+        include js/isotope.js
+        include js/imagesloaded.min.js
+        include js/wow.min.js
+        include js/smoothscroll.js
+        include js/jquery.flexslider.js
+        include js/custom.js
+        include js/paypal.js
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    

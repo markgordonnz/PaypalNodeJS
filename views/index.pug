@@ -1,0 +1,41 @@
+//Blocks can be used to call reusable code.
+//As the index is a single page website, blocks are used for each section.
+//Add, delete, move blocks as required.
+
+//First is the header block, this template assumes the same title for all pages
+block header
+    include includes/header
+//Add the body, each include is a snippet of html
+block body
+    include includes/navbar
+    include includes/home
+    include includes/service
+    include includes/divider
+    include includes/about
+    include includes/team
+    include includes/newsletter
+    include includes/pricing
+    include includes/portfolio
+    include includes/contact
+    
+//Finish with the footer, this includes the html for the modals
+//Javascript files are included in the scripts.
+Block Footer
+    include includes/modals
+    include includes/footer
+    include includes/scripts
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
