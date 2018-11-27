@@ -1,7 +1,68 @@
 div(id="initialjs" class="modal")
     div(class="modal-content")
-        span(class="close") Cancel
         h1 Initial Consult $800 AUD
         p You will now be taken to the Paypal site for payment.
         a(href="#pricing" class="cancelbutton") Cancel
-        a(href="/buy" class="paynowbutton") Pay Now
+    
+        div(id="paypal-button-container")
+        script(src="https://www.paypalobjects.com/api/checkout.js")
+
+    script.    
+        
+        paypal.Button.render({
+ 
+            env: 'sandbox', 
+
+
+            style: {
+                layout: 'vertical',  
+                size:   'medium',    
+                shape:  'rect',      
+                color:  'gold'       
+                    },
+
+            funding: {
+                allowed: [
+                paypal.FUNDING.CARD,
+                paypal.FUNDING.CREDIT
+                    ],
+                disallowed: []
+                },
+
+            commit: true,
+
+
+            client: {
+                sandbox: 'Af6MHbK1OOOVo15ZiEQSsEDs3LLY6uEhh5LExSkMGVHDIeG3HMSPzIXpO6I8wz1_RxgRgjG7mDVrH8G3',
+                production: ''
+                    },
+
+            payment: function (data, actions) {
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                amount: {
+                                    total: '799.00',
+                                    currency: 'AUD'
+                                    }
+                                }
+                            ]
+                        }
+                    });
+                },
+
+            onAuthorize: function (data, actions) {
+                return actions.payment.execute()
+                    .then(function () {
+                        window.alert=('Payment Complete!');
+                        });
+                }
+
+            redirect_urls: {
+                return_url: "http://localhost:3000/success",
+                cancel_url: "http://localhost:3000/err"
+                },
+                
+            },'#paypal-button-container');
+
