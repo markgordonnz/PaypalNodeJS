@@ -5,7 +5,7 @@ var modal = document.getElementById('initialjs');
 var btn = document.getElementById("initial");
 
 // Get the button to cancel the transaction
-var btnclose = document.getElementsByClassName("cancelbutton")[0];
+var close = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, call the initjs
 btn.onclick = function() {
@@ -13,7 +13,7 @@ btn.onclick = function() {
 }
 
 // When the user clicks on cancel close popup
-btnclose.onclick = function() {
+close.onclick = function() {
     modal.style.display = "none";
     window.location.hash = '#pricing';
 }
